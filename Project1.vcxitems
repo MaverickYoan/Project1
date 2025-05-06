@@ -16,4 +16,24 @@
   <ItemGroup>
     <Image Include="$(MSBuildThisFileDirectory)Icône.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)HTMLPage.htm" />
+    <None Include="$(MSBuildThisFileDirectory)Source.def" />
+    <None Include="$(MSBuildThisFileDirectory)StyleSheet.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="$(MSBuildThisFileDirectory)XMLSchema.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Xsd>
+    <Xsd Include="$(MSBuildThisFileDirectory)XMLSchema1.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Xsd>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Module.ixx" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Header.h" />
+  </ItemGroup>
 </Project>
